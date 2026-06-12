@@ -5,6 +5,7 @@ const title = 'ZeroBeatLabs — Turn recurring IT exports into a report your sta
 const description =
   'ZeroBeatLabs builds fixed-scope reporting workflows for MSPs and lean IT teams. Start with sanitized ticket and uptime exports; finish with a completed report, reusable template, QA controls, and a runbook.';
 const canonical = new URL('/', Astro.site);
+const ogImage = new URL('/og.png', Astro.site);
 ---
 
 <!doctype html>
@@ -16,12 +17,20 @@ const canonical = new URL('/', Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#16181d" />
     <link rel="sitemap" href="/sitemap.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="ZeroBeatLabs" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -150,6 +159,9 @@ const canonical = new URL('/', Astro.site);
           <p>
             Bring the current report and two sanitized sample exports. We will
             quickly determine whether the fixed-scope sprint fits.
+          </p>
+          <p>
+            <a class="button" href="mailto:hello@zerobeatlabs.org">hello@zerobeatlabs.org</a>
           </p>
           <p>
             <span class="button" aria-disabled="true">View the Upwork project</span>
